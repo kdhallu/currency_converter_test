@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <form class="form" id="form">
+        <div class="form-input">
+            <input aria-label="Enter base amount" type="number" required id="source-amount" pattern="\d{3}"
+                   placeholder="Enter base amount"/>
+        </div>
+        <div class="form-input">
+            <select aria-label="Destination currency" id="source-currency-input">
+                <option>Euro</option>
+            </select>
+        </div>
+        <div class="form-input">
+            <select aria-label="Destination currency" id="destination-currency-input"></select>
+        </div>
+        <div class="result-wrapper">
+            <h2 id="result-text"></h2>
+        </div>
+        <div class="convert-button-wrapper">
+            <input type="submit" value="Convert" id="convert-button"/>
+            <div class="ease"></div>
+        </div>
+        <div id="conversion-history-wrapper">
+            <h2>Conversion History</h2>
+            <h4 id="conversion-history"></h4>
+        </div>
+    </form>
+</div>
+
+<!-- Use the `axios` library for making Ajax requests. -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- Put your own JavaScript into this file. -->
+<script src="scripts.js"></script>
+</body>
+</html>

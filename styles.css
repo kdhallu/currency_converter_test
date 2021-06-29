@@ -1,0 +1,82 @@
+html {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    height: 100%;
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* background animations */
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Main container */
+.container {
+    background-color: #ffffff38;
+    padding: 35px 35px 50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -260px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+/* form elements */
+input, select {
+    color: #3c3c3c;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 2px;
+    line-height: 22px;
+    padding: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* for input */
+    border: 3px solid #ffffff;
+}
+
+#convert-button {
+    cursor: pointer;
+    background-color: #297cb6;
+    color: white;
+    font-size: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: all 0.3s;
+    font-weight: 700;
+}
+
+#convert-button:hover {
+    color: #ffffff;
+    background-color: #297CB6FF;
+    border: #fbfbfb solid 2px;
+}
+
+/* Hide conversion history on first load */
+#conversion-history-wrapper {
+    display: none;
+}
+
+/* Responsive changes */
+@media only screen and (max-width: 580px) {
+    #form-div {
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
